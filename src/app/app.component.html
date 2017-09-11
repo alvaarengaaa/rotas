@@ -1,16 +1,17 @@
 <nav>
   <div class="nav-wrapper purple darken-3">
-    <a routerLink="" class="brand-logo right ">Rotas Ng2</a>
+    <a *ngIf="mostrarMenu" routerLink="" class="brand-logo right ">Rotas Ng2</a>
+    <a *ngIf="!mostrarMenu" class="brand-logo right ">Rotas Ng2</a>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
-      <li routerLinkActive="active">
+      <li *ngIf="!mostrarMenu" routerLinkActive="active"><a routerLink="/login">Login</a></li>
+      <li *ngIf="mostrarMenu" routerLinkActive="active">
         <a routerLink="/cursos" [queryParams]="{ pagina:'1' }">
           Cursos
         </a>
       </li>
       <!--li routerLinkActive="active"><a [routerLink]="['curso', idCurso.value]">Curso</a>
       </li-->
-      <li routerLinkActive="active"><a routerLink="/alunos">Alunos</a></li>
+      <li *ngIf="mostrarMenu" routerLinkActive="active"><a routerLink="/alunos">Alunos</a></li>
     </ul>
   </div>
 </nav>

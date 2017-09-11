@@ -1,11 +1,16 @@
 <h5>Login</h5>
 <div class="row">
   <div class="input-field col s4">
-    <input id="usuario" type="text" class="validate">
+    <input [(ngModel)]="usuario.nome" id="usuario" type="text" class="validate">
     <label for="usuario">Usuário</label>
   </div>
   <div class="input-field col s4">
-    <input id="senha" type="password" class="validate">
+    <input 
+      [(ngModel)]="usuario.senha" 
+      id="senha" 
+      type="password" 
+      class="validate" 
+      (keyup.enter)="fazerLogin()">
     <label for="senha">Senha</label>
   </div>
   <div class="input-field col s2">
