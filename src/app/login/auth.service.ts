@@ -13,8 +13,8 @@ export class AuthService {
 
   fazerLogin(usuario: Usuario) {
     if (
-      usuario.nome === 'usuario@email.com' &&
-      usuario.senha === '123456') {
+      usuario.nome === '1' &&
+      usuario.senha === '1') {
         this.usuarioAutenticado = true;
         this.mostrarMenuEmitter.emit(true);
         this.router.navigate(['/']);

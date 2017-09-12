@@ -14,7 +14,7 @@ export class AlunosComponent implements OnInit {
   constructor(private alunosService: AlunosService) { }
 
   ngOnInit() {
-    this.alunos = this.alunosService.getAlunos();
+     this.alunos = this.alunosService.getAlunos();
   }
 
 }

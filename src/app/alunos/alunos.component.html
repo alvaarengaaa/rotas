@@ -6,7 +6,7 @@
             class="collection-item"
             *ngFor="let item of alunos"
             [routerLink]="[item.id]">
-            {{ item.nome }}
+            {{ item?.nome }}
         </a>
         </div>
     </div>
